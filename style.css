@@ -1,0 +1,310 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    transition: .3s;
+    color: #fff;
+    font-family: "Roboto", sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: #111;
+    background-image: linear-gradient(to bottom left, #20195c, #100a38);
+    overflow: hidden;
+}
+
+
+.container {
+    max-width: 1600px;
+    margin: auto;
+}
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 6px;
+    animation: Fade 1s linear forwards;
+    opacity: 0;
+}
+
+header .logo img {
+    width: 60px;
+}
+
+header ul {
+    display: flex;
+    list-style-type: none;
+}
+
+header ul a {
+    display: block;
+    padding: 8px 6px;
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+header ul a:hover {
+    color: #11a9f4;
+    text-decoration: underline;
+}
+
+.hero-content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 6rem;
+}
+
+.hero-content h1 {
+    font-size: 8rem;
+    text-transform: uppercase;
+    display: flex;
+    gap: 40px;
+    font-weight: bolder;
+    animation: Fade 1s linear forwards;
+    animation-delay: 1s;
+    opacity: 0;
+}
+
+.hero-content h1 .highlight {
+    color: #1aa7ee;
+}
+
+.hero-content h1.focus-stroke {
+    color: transparent;
+    -webkit-text-stroke-color: #dcdcdc;
+    -webkit-text-stroke-width: 1px;
+}
+
+.hero-content .about {
+    max-width: 60%;
+    font-weight: 400;
+    margin-bottom: 40px;
+    margin-top: 40px;
+    padding: 10px 25px;
+    line-height: 26px;
+    color: #999;
+    position: relative;
+    animation: Fade 1s linear forwards;
+    animation-delay: 1.5s;
+    opacity: 0;
+}
+
+.hero-content .about::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    left: 0;
+    top: 0;
+    width: 3px;
+    border-radius: 99px;
+    background: linear-gradient(to top, transparent, #1aa7ee);
+}
+
+.hero-content .button-s {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    animation: Fade 1s linear forwards;
+    animation-delay: 2s;
+    opacity: 0;
+}
+
+.hero-content .button-s button {
+    padding: 14px 16px;
+    border-radius: 9px;
+    display: flex;
+    gap: 20px;
+    color: #fff;
+    background: transparent;
+    border: 2px solid transparent;
+    cursor: pointer;
+}
+
+
+.hero-content .button-s button.shop-now {
+    background: #1aa7ee;
+}
+
+.hero-content .button-s button.add-to-cart {
+    border-width: 4px;
+    border-color: #1aa7ee6e;
+}
+
+.hero-content .button-s button.shop-now:hover {
+    background: #0f7fb7;
+}
+
+.hero-content .button-s button.add-to-cart:hover {
+    background: #1aa7ee;
+    border-color: #1aa7ee;
+}
+
+.hero-content .right-content  {
+    position: relative;
+}
+
+.hero-content .right-content .shoes {
+    width: 900px;
+    /* rotate: -40deg; */
+    animation: ShoesAni 1s linear forwards;
+    animation-delay: 3s;
+    opacity: 0;
+}
+
+.hero-content .right-content::before {
+    content: 'Nike';
+    position: absolute;
+    top: 130px;
+    left: 30%;
+    transform: translateX(-50%) rotate(90deg);
+    font-size: 20rem;
+    text-transform: uppercase;
+    color: transparent;
+    -webkit-text-stroke-color: #dcdcdc0d;
+    -webkit-text-stroke-width: 3px;
+    animation: BeforeFade 1s linear forwards;
+    animation-delay: 2.7s;
+    opacity: 0;
+}
+
+.hero-content .right-content .glass-card {
+    position: absolute;
+    top: 90%;
+    left: 35%;
+    min-width: 180px;
+    background: #ffffff1e;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    animation: Fade 1s linear forwards;
+    animation-delay: 2s;
+    opacity: 0;
+}
+
+.hero-content .right-content .glass-card p {
+    font-size: 13px;
+    color: #aaa9a9;
+}
+
+.hero-content .right-content .glass-card h4 {
+    font-size: 19px;
+    padding: 4px 0;
+}
+
+.hero-content .right-content .glass-card .icon {
+    height: 70px;
+    width: 70px;
+    background: #fff;
+    border-radius: 99px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-content .right-content .glass-card .icon i {
+    color: #000;
+    font-size: 35px;
+}
+
+.hero-content .right-content .circle {
+    position: relative;
+    height: 60px;
+    width: 60px;
+    border-radius: 99px;
+    background: linear-gradient(#f37906, #af08a9);
+    animation: Fade 1s linear forwards;
+    animation-delay: 2s;
+    opacity: 0;
+}
+
+.hero-content .right-content .circle::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    height: 90%;
+    width: 90%;
+    background: #20195c;
+    border-radius: 99px;
+
+}
+
+
+.hero-content .right-content .circle:nth-child(2) {
+    top: 90%;
+    left: 80%;
+}
+
+.tape {
+    position: absolute;
+    top: 90%;
+    left: 0;
+    padding: 10px 0;
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    animation: TapeFade 1s linear forwards;
+    animation-delay: 4s;
+    opacity: 0;
+}
+
+.tape p {
+    display: block;
+    padding: 10px 30px;
+    text-transform: uppercase;
+    font-weight: bolder;
+    letter-spacing: 2px;
+    font-size: 2rem;
+}
+
+.tape.dark-blue {
+    background: #100a38;
+    transform: rotate(5deg);
+}
+
+.tape.light-red {
+    background: #1d0927;
+    transform: rotate(-5deg);
+}
+
+.tape.dark-blue p {
+    color: #6659b8;
+}
+
+.tape.light-red p {
+    color: #e28bb9;
+}
+
+
+@keyframes ShoesAni {
+    from { transform: translateX(0); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; rotate: -40deg; }
+}
+
+@keyframes Fade {
+    from { transform: translateY(-50px); opacity: 0; }
+    to {  transform: translateY(0); opacity: 1; }
+}
+
+@keyframes BeforeFade {
+    from { opacity: 0; }
+    to {  opacity: 1; }
+}
+
+@keyframes TapeFade {
+    from { opacity: 0; }
+    to {  opacity: 1; }
+}
+
+
